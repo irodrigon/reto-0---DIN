@@ -5,6 +5,7 @@
  */
 package UserInterfaceTier;
 
+import Model.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -24,7 +25,7 @@ public class UserDataWindowController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
-        label.setText("Hello World!");
+        label.setText("Hello World!"); 
     }
     
     @Override
@@ -32,4 +33,7 @@ public class UserDataWindowController implements Initializable {
         // TODO
     }    
     
+    public User userManager(){
+        return null;
+    }
 }

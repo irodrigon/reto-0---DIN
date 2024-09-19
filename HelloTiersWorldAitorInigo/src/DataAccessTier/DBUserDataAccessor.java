@@ -5,10 +5,18 @@
  */
 package DataAccessTier;
 
+import Model.User;
+
+
+
 /**
  *
  * @author Iñi
  */
-public class DBUserDataAccessor {
-    
+public class DBUserDataAccessor implements DataAccessible{
+
+    @Override
+    public User lookUserData() {
+       return null;
+    }
 }

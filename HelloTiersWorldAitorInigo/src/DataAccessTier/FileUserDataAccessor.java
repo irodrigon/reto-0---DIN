@@ -5,10 +5,16 @@
  */
 package DataAccessTier;
 
+import Model.User;
+
 /**
  *
  * @author Iñi
  */
-public class FileUserDataAccessor {
-    
+public class FileUserDataAccessor implements DataAccessible{
+
+    @Override
+    public User lookUserData() {
+        return null;
+    }
 }

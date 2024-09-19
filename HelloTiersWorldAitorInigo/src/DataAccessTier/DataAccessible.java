@@ -5,10 +5,14 @@
  */
 package DataAccessTier;
 
+import Model.User;
+
 /**
  *
  * @author Iñi
  */
 public interface DataAccessible {
+    
+            public User lookUserData();
     
 }
