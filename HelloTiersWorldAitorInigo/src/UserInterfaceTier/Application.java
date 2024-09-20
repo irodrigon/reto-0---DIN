@@ -5,8 +5,6 @@
  */
 package UserInterfaceTier;
 
-import java.util.Locale;
-import java.util.ResourceBundle;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

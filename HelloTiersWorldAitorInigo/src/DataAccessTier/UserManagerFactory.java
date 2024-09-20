@@ -14,22 +14,17 @@ import java.util.ResourceBundle;
  */
 public class UserManagerFactory {
     
-    private static Boolean isFile = true;
-    
-    public static FileUserDataAccessor createFileConnection(){
-        ResourceBundle bundle = ResourceBundle.getBundle("resources/selection", Locale.getDefault());
-        String path = bundle.getString("path");
+    public static DataAccessible getData(){
         
-        return new FileUserDataAccessor();
+        ResourceBundle bundle = ResourceBundle.getBundle("resources/factoryconfig", Locale.getDefault());
+        String isFile = bundle.getString("isFile");
+        
+        if(isFile.equals("true")){
+            return new FileUserDataAccessor();
+        }else{
+            return new DBUserDataAccessor();
+        }
     }
     
-    public static DBUserDataAccessor createDatabaseConnection(){
-        ResourceBundle bundle = ResourceBundle.getBundle("resources/selection", Locale.getDefault());
-        String url = bundle.getString("url");
-        String user = bundle.getString("user");
-        String pass = bundle.getString("pass");
-        
-        return new DBUserDataAccessor();
-    }
 }
 

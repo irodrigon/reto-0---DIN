@@ -5,12 +5,15 @@
  */
 package UserInterfaceTier;
 
+import DataAccessTier.DataAccessible;
+import DataAccessTier.UserManagerFactory;
 import Model.User;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 /**
@@ -19,21 +22,33 @@ import javafx.scene.control.Label;
  */
 public class UserDataWindowController implements Initializable {
     
+     DataAccessible userManager = UserManagerFactory.getData();
+     User user = userManager.lookUserData();
+    
     @FXML
-    private Label label;
+    private Label idLabel;
+    @FXML
+    private Label nameLabel;
+    @FXML
+    private Label lastNameLabel;
+    @FXML
+    private Label telephoneLabel;
+    @FXML
+    private Label emailLabel;
+    @FXML
+    private Button buttonShowUserData;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!"); 
+       idLabel.setText(user.getId());
+       nameLabel.setText(user.getName());
+       lastNameLabel.setText(user.getLastName());
+       telephoneLabel.setText(user.getTelephone());
+       emailLabel.setText(user.getEmail());
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    public User userManager(){
-        return null;
-    }
 }
