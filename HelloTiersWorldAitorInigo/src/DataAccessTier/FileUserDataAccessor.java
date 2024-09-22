@@ -6,7 +6,6 @@
 package DataAccessTier;
 
 import Model.User;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
@@ -20,9 +19,9 @@ public class FileUserDataAccessor implements DataAccessible{
     @Override
     public User lookUserData() {
         userData = new User();
-        ResourceBundle bundle = ResourceBundle.getBundle("resources/selection", Locale.getDefault());
+        ResourceBundle bundle = ResourceBundle.getBundle("resources/selection");
         String path = bundle.getString("path");
-        ResourceBundle bundleFile = ResourceBundle.getBundle(path, Locale.getDefault());
+        ResourceBundle bundleFile = ResourceBundle.getBundle(path);
         String id = bundleFile.getString("id");
         String name = bundleFile.getString("name");
         String lastName = bundleFile.getString("lastname");

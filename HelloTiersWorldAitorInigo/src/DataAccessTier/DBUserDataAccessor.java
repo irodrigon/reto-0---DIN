@@ -10,7 +10,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 
@@ -28,7 +27,7 @@ public class DBUserDataAccessor implements DataAccessible{
     @Override
     public User lookUserData() {
        
-       ResourceBundle bundle = ResourceBundle.getBundle("resources/selection", Locale.getDefault());
+       ResourceBundle bundle = ResourceBundle.getBundle("resources/selection");
        String driver = bundle.getString("driver");
        String url = bundle.getString("url");
        String user = bundle.getString("user");

@@ -5,7 +5,6 @@
  */
 package DataAccessTier;
 
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
@@ -16,7 +15,7 @@ public class UserManagerFactory {
     
     public static DataAccessible getData(){
         
-        ResourceBundle bundle = ResourceBundle.getBundle("resources/factoryconfig", Locale.getDefault());
+        ResourceBundle bundle = ResourceBundle.getBundle("resources/factoryconfig");
         String isFile = bundle.getString("isFile");
         
         if(isFile.equals("true")){
