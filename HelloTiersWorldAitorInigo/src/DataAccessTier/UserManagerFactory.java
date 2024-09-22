@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 
 /**
  *
- * @author Iñi
+ * @author Iñiz
  */
 public class UserManagerFactory {
     

@@ -8,6 +8,7 @@ package UserInterfaceTier;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -30,6 +31,8 @@ public class Application extends javafx.application.Application {
         stage.setScene(scene);
         //show stage
         stage.show();
+        //put icon on view
+        stage.getIcons().add(new Image("resources/javacup.png"));
     }
 
     /**
