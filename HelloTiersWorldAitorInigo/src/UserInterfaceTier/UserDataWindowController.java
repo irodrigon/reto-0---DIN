@@ -5,15 +5,17 @@
  */
 package UserInterfaceTier;
 
-import DataAccessTier.DataAccessible;
 import DataAccessTier.UserManagerFactory;
 import Model.User;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 
 /**
@@ -21,9 +23,6 @@ import javafx.scene.control.Label;
  * @author Iñi
  */
 public class UserDataWindowController implements Initializable {
-    
-     DataAccessible userManager = UserManagerFactory.getData();
-     User user = userManager.lookUserData();
     
     @FXML
     private Label idLabel;
@@ -40,11 +39,17 @@ public class UserDataWindowController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-       idLabel.setText(user.getId());
-       nameLabel.setText(user.getName());
-       lastNameLabel.setText(user.getLastName());
-       telephoneLabel.setText(user.getTelephone());
-       emailLabel.setText(user.getEmail());
+       try{
+            User user = UserManagerFactory.getData().lookUserData();
+            idLabel.setText(user.getId());
+            nameLabel.setText(user.getName());
+            lastNameLabel.setText(user.getLastName());
+            telephoneLabel.setText(user.getTelephone());
+            emailLabel.setText(user.getEmail());
+       }catch(Exception e){
+           Logger.getLogger("UserInterfaceTier").severe(e.getLocalizedMessage());
+           new Alert(Alert.AlertType.ERROR,e.getLocalizedMessage(),ButtonType.OK).showAndWait();
+       }
     }
     
     @Override

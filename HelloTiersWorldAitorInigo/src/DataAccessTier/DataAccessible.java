@@ -8,11 +8,20 @@ package DataAccessTier;
 import Model.User;
 
 /**
- *
- * @author Iñi
+ * Description: This is an interface which carries a method used by UserDataWindowController to return a User by means of UserManagerFactory.
+ * 
+ * @author Inigo,Aitor
+ * 
+ * 
  */
 public interface DataAccessible {
     
-            public User lookUserData();
+            /**
+             * 
+             * 
+             * @throws Exception if an errors occurs interacting with database or files.
+             */
+    
+            public User lookUserData() throws Exception;
     
 }
