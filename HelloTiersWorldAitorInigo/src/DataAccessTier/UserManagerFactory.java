@@ -8,11 +8,20 @@ package DataAccessTier;
 import java.util.ResourceBundle;
 
 /**
- *
- * @author Iñiz
+ * Factoria para la creacion de los metodos que nos devolveran un User
+ * 
+ * @author Iñigo y Aitor
  */
 public class UserManagerFactory {
     
+    
+    /**
+    * Metodo que utiliza un archivo de propiedades para decidir cual de los 2 metodos es devuelto
+    * por la factoria.
+    * 
+    * @author Iñigo y Aitor
+    * @return Un FileUserDataAccessor() o DBUserDataAccessor()
+    */
     public static DataAccessible getData(){
         
         ResourceBundle bundle = ResourceBundle.getBundle("resources/factoryconfig");

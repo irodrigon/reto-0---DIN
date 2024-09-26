@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DataAccessTier;
 
 import Model.User;
@@ -15,8 +10,9 @@ import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
 /**
- *
- * @author Iñi
+ * Clase que implementa la interfaz DataAccessible para el uso del metodo lookUserData()
+ * 
+ * @author Iñigo y Aitor
  */
 public class DBUserDataAccessor implements DataAccessible {
 
@@ -27,8 +23,15 @@ public class DBUserDataAccessor implements DataAccessible {
     private User userData;
     private final String USER_DATA = "SELECT * FROM USER";
 
+    /**
+    * Accede a la base de datos para recoger los atributos de User. 
+    * 
+    * @author Iñigo y Aitor
+    * @return Devuelve un User con parametros
+    * @throws SQLException Lanzara un error si no puede interactuar con la base de datos
+    */    
     @Override
-    public User lookUserData() {
+    public User lookUserData() throws Exception{
 
         ResourceBundle bundle = ResourceBundle.getBundle("resources/selection");
         String driver = bundle.getString("driver");

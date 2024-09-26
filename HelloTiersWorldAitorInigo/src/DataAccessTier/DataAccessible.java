@@ -1,25 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DataAccessTier;
 
 import Model.User;
 
 /**
- * Description: This is an interface which carries a method used by UserDataWindowController to return a User by means of UserManagerFactory.
- * 
- * @author Inigo,Aitor
- * 
- * 
+ * Interfaz cuyo metodo se usa a travez de una factoria para devolver un User
+ * @author Inigo y Aitor
  */
 public interface DataAccessible {
     
             /**
+             * Metodo usado para devolver un User
              * 
-             * 
-             * @throws Exception if an errors occurs interacting with database or files.
+             * @throws Exception Si no puede recoger los atributos arrojara una excepcion.
+             * @return Devuelve un User
              */
     
             public User lookUserData() throws Exception;

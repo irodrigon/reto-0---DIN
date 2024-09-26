@@ -12,10 +12,10 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- *
- * @author Iñi
- * @param stage The main window
- * @throws Exception when it doesn't find the view.
+ * Clase main donde se empezara ejecutando el programa
+ * 
+ * @author Iñigo y Aitor
+ *  
  */
 public class Application extends javafx.application.Application {
     

@@ -19,7 +19,9 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 
 /**
- *
+ * Vista donde se maneja la ventana y dindo se mostrara la informacion de un User por pantalla
+ * cuando se pulse el boton. 
+ * 
  * @author Iñi
  */
 public class UserDataWindowController implements Initializable {
@@ -37,6 +39,11 @@ public class UserDataWindowController implements Initializable {
     @FXML
     private Button buttonShowUserData;
     
+    /**
+    * Muestra la informacion por pantalla cuando se pulsa el boton. 
+    * 
+    * @author Iñi
+    */
     @FXML
     private void handleButtonAction(ActionEvent event) {
        try{
