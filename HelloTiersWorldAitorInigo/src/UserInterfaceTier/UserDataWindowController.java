@@ -19,7 +19,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 
 /**
- * Vista donde se maneja la ventana y dindo se mostrara la informacion de un User por pantalla
+ * Vista donde se maneja la ventana y donde se mostrara la informacion de un User por pantalla
  * cuando se pulse el boton. 
  * 
  * @author Iñi
